@@ -1,12 +1,20 @@
 #include <stdio.h>
+
 int main()
 {
-    signed int value = 0;
+    int number;
+
     printf("Enter a number: ");
-    scanf("%d", &value);
-    if (value & 1)
-        printf("LSB of %d is set(1).\n", value);
+    scanf("%d", &number);
+
+    if ((number & 1) == 1)
+    {
+        printf("The LSB of %d is 1.\n", number);
+    }
     else
-        printf("LSB of %d is unset (0).\n", value);
+    {
+        printf("The LSB of %d is 0.\n", number);
+    }
+
     return 0;
 }
